@@ -1,0 +1,25 @@
+class Singer {
+	public void singSong() { // method that will perform polymorphism
+		System.out.println("This singer sings a song");
+	}
+}
+
+class Beyonce extends Singer {
+	public void singSong() { // method type to execute for Beyonce
+		System.out.println("Beyonce sings Diva.");
+	}
+}
+
+class Rihanna extends Singer {
+	public void singSong() { // method type to execute for Rihanna
+		System.out.println("Rihanna sings Kiss it better.");
+	}
+}
+
+/* when calling  the method it will be determined which type to execute:
+Singer beySong = new Beyonce();
+Singer ririSong = new Rihanna();
+
+beySong.singSong(); -> will output "Beyonce sings Diva."
+ririSong.singSong(); -> will output "Rihanna sings Kiss it Better."
+*/
